@@ -3,13 +3,13 @@ import Card from './Card'
 
 const Quotes = ({quotes}) => {
 
-  const quoteCards = quotes.map(quote => {
+  const quoteCards = quotes.map((quote, index) => {
     return (
       <Card
         text={quote.text}
         author={quote.author}
-        id={quote.id}
-        key={quote.id}
+        id={index}
+        key={index}
       />
     )
   })
