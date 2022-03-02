@@ -30,10 +30,10 @@ class App extends Component {
 
 componentDidMount = () => {
   fetchQuotes()
-  .then(data=>console.log("is this working?", data))
-  // .then(data => this.setState({quotes: data}))
-  GetQuotes()
-  .then(data=>console.log("are you also working?", data))
+  // .then(data=>console.log("is this working?", data))
+  .then(data => this.setState({quotes: data}))
+  // GetQuotes()
+  // .then(data=>console.log("are you also working?", data))
 
 
 }

@@ -6,8 +6,8 @@ const Quotes = ({quotes}) => {
   const quoteCards = quotes.map(quote => {
     return (
       <Card
-        title={quote.title}
-        description={quote.description}
+        text={quote.text}
+        author={quote.author}
         id={quote.id}
         key={quote.id}
       />
