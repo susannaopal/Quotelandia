@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-// import Quotes from './Quotes.js';
-// import { fetchQuotes } from './apiCall.js';
+import Quotes from './Quotes.js';
+import { fetchQuotes } from './apiCall.js';
 // import Error from './Error.js'
 
 
-// class App extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       quotes: [],
-//       error: ''
-//     }
-//   }
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      quotes: [],
+      error: ''
+    }
+  }
 
-// componentDidMount = () => {
-//   fetchQuotes()
-//   .then(data => this.setState({quotes: data}))
+componentDidMount = () => {
+  fetchQuotes()
+  .then(data => this.setState({quotes: data}))
 // .catch(error => this.setState({error: error}))
-// }
+}
  
-// render() {
-  const App = () => {
-     return(
+render() {
+  return(
     <main className='App'>
         <nav className='nav'>
           <h1 className='title'>Welcome to Quotelandia</h1>
@@ -38,9 +37,8 @@ import './App.css';
              {/* <Quotes quotes={this.state.quotes} />    */}
     </main>
   )
- }
-// }
-// }
+}
+}
 
 
 export default App;

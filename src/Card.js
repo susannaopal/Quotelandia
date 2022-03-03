@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardDetails = ({ text, author, id }) => {
+const Card = ({ text, author, id }) => {
   return (
     <div className='card'>
       <h3>{text}</h3>
@@ -9,5 +9,5 @@ const CardDetails = ({ text, author, id }) => {
   )
 }
 
-export default CardDetails;
+export default Card;
 
