@@ -33,7 +33,8 @@ render() {
         <div className='img-container'>
               <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed' />
         </div>
-            {/* <Quotes quotes={this.state.quotes} />     */}       
+             {/* <Quotes quotes={this.state.quotes} />    */}
+        
     </main>
   )
 }
