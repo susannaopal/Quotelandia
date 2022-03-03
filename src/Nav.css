@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #F0F8FF;
+  width: 100%;
+  height: 20%;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.nav-btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-side-btn,
+.right-side-btn  {
+  height: 50px;
+  width: 15vw;
+  background-color: #d0cbc3;
+  color: #F0F8FF;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: alias;
+  box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway', sans-serif;
+} 
+
+/* may change the cursor to pointer */
+
+.left-side-btn:hover,
+.right-side-btn:hover {
+  transition: .2s;
+  transform: scale(1.5);
+}
+
+.about-msg {
+  font-style: italic;
+  color: #F0F8FF;
+}
