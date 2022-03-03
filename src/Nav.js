@@ -14,9 +14,9 @@ const Nav = () => {
             <Link to='/quotes'>
               <button className='left-side-btn'>See Quotes</button>
             </Link>
-
+            <Link to='/search'>
               <button className='right-side-btn'>Search By Author</button>
-
+            </Link>
             </div>
             <div className='about-msg'>
                 <h2 className='greeting-msg'>a land for words...</h2>

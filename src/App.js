@@ -29,6 +29,7 @@ render() {
         <Routes> 
           <Route path='/'/>
           <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
+          <Route path='/search'/>
         </Routes>
     </main>
   )
