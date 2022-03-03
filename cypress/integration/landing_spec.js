@@ -39,8 +39,7 @@ describe('Landing Page User Flow', () => {
   })
 
   it('should see a background image', () => {
-    cy.get('.img-container')
-      .get('.background-img')
-      .should('be.visible')
+      cy.get('.background-img')
+        .should('be.visible')
   })
 })
