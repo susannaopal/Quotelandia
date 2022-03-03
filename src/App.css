@@ -10,9 +10,12 @@
 
 .App {
   background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg");
-  background-position: fixed;
+  /* background-position: fixed; */
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
+  overflow: overlay;
   flex-direction: column;
   align-items: center;
   text-align: center;
