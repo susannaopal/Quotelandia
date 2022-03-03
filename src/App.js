@@ -5,14 +5,14 @@ import './App.css';
 // import Error from './Error.js'
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      quotes: [],
-      error: ''
-    }
-  }
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       quotes: [],
+//       error: ''
+//     }
+//   }
 
 // componentDidMount = () => {
 //   fetchQuotes()
@@ -20,8 +20,9 @@ class App extends Component {
 // .catch(error => this.setState({error: error}))
 // }
  
-render() {
-  return(
+// render() {
+  const App = () => {
+     return(
     <main className='App'>
         <nav className='nav'>
           <h1 className='title'>Welcome to Quotelandia</h1>
@@ -37,8 +38,9 @@ render() {
              {/* <Quotes quotes={this.state.quotes} />    */}
     </main>
   )
-}
-}
+ }
+// }
+// }
 
 
 export default App;
