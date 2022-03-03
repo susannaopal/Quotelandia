@@ -1,6 +1,8 @@
 import React from 'react';
-import Card from './Card'
-import './Quotes.css'
+import Card from './Card';
+import './Quotes.css';
+import { Link } from 'react-router-dom';
+
 
 const Quotes = ({quotes}) => {
 
@@ -16,9 +18,14 @@ const Quotes = ({quotes}) => {
   })
 
   return (
-    <div className='quotes-container'>
-      {quoteCards}
-    </div>
+    <>
+     <Link to='/'>
+        <button>Return Home</button>
+      </Link>
+      <div className='quotes-container'>
+        {quoteCards}
+      </div>
+    </>
   )
 }
 
