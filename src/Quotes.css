@@ -2,4 +2,27 @@
   background-color: transparent;
   width: 100%;
   height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 8%;
+}
+
+.home-btn {
+  margin-top: 10px;
+  height: 43px;
+  width: 8vw;
+  background-color: #d0cbc3;
+  color: #F0F8FF;
+  border: none;
+  font-size: 17px;
+  font-weight: bolder;
+  cursor: alias;
+  box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway', sans-serif;
+} 
+
+.home-btn:hover {
+  transition: .2s;
+  transform: scale(1.5);
 }

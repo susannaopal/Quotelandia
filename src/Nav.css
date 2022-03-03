@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #F0F8FF;
+  background-color: #A1BAC3;
   width: 100%;
   height: 20%;
 }
 
 .title {
   font-size: xx-large;
+  color: #F0F8FF;
+  cursor: alias;
 }
 
 .nav-btns-container {
