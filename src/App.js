@@ -39,4 +39,3 @@ render() {
 export default App;
 
              {/* <Quotes quotes={this.state.quotes} />    */}
-
