@@ -20,7 +20,7 @@ const Quotes = ({quotes}) => {
   return (
     <>
      <Link to='/'>
-        <button>Return Home</button>
+        <button className='home-btn'>Return Home</button>
       </Link>
       <div className='quotes-container'>
         {quoteCards}

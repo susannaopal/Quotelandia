@@ -7,9 +7,9 @@ const Nav = () => {
 
   return (
   <nav className='nav'>
-          <Link to='/'>
+          {/* <Link to='/'> */}
             <h1 className='title'>Welcome to Quotelandia</h1>
-          </Link>
+          {/* </Link> */}
             <div className='nav-btns-container'>
             <Link to='/quotes'>
               <button className='left-side-btn'>See Quotes</button>

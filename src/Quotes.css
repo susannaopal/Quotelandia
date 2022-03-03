@@ -8,3 +8,21 @@
   padding: 8%;
 }
 
+.home-btn {
+  height: 50px;
+  width: 15vw;
+  background-color: #d0cbc3;
+  color: #F0F8FF;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: alias;
+  box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway', sans-serif;
+} 
+
+.home-btn:hover {
+  transition: .2s;
+  transform: scale(1.5);
+}
+
