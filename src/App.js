@@ -20,21 +20,17 @@ class App extends Component {
 render() {
   return(
     <main className='App'>
-      {/* <section className='home-page'> */}
         <nav className='nav'>
           <h1 className='title'>Welcome to Quotelandia</h1>
-        </nav>
-        {/* <div className='image'> */}
-        <div className='img-btns-container'>
-              <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed' />
-            <div className='nav-btns'>
-              <button className='left-side'>Quote of the Visit</button>
-              <button className='right-side'>Search for Author</button>
+            <div className='nav-btns-container'>
+              <button className='left-side-btn'>Quote of the Visit</button>
+              <button className='right-side-btn'>Search for Author</button>
             </div>
-        </div>
-          {/* </div> */}
-      {/* <Quotes quotes={this.state.quotes} /> */}
-      {/* </section> */}
+        </nav> 
+        <div className='img-container'>
+              <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed' />
+        </div>      
+      {/* <Quotes quotes={this.state.quotes} /> */}    
     </main>
   )
 }
