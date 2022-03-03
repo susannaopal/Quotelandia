@@ -1,26 +1,24 @@
+.background-img {
+  position: fixed;
+  max-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+  opacity: .3;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #A1BAC3
+  background-color: #A1BAC3;
+  font-family: 'Raleway', sans-serif;
 }
 
-.background-img {
-  /* border: solid 2px yellow; */
-  position: center; 
-  z-index: -1;
-  opacity: .7;  
-  height: 75%;
-  width: 75%;
-  /* border-radius: 10px; */
-  margin-top: 10px;
-}
 
 .nav {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid white; */
   text-align: center;
   color: #F0F8FF;
   width: 100%
@@ -31,27 +29,25 @@
 }
 
 .nav-btns-container {
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
 }
 
-
- .left-side-btn,
+.left-side-btn,
 .right-side-btn  {
   height: 50px;
   width: 15vw;
   background-color: #d0cbc3;
   color: #F0F8FF;
   border: none;
-  /* border-radius: 10px; */
   font-size: 20px;
   font-weight: bolder;
   cursor: alias;
   box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway', sans-serif;
 } 
 
-/* may chance the cursor to pointer */
+/* may change the cursor to pointer */
 
 .left-side-btn:hover,
 .right-side-btn:hover {
@@ -59,4 +55,7 @@
   transform: scale(1.5);
 }
 
-
+.about-msg {
+  font-style: italic;
+  color: #F0F8FF;
+}
