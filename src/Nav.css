@@ -30,8 +30,6 @@
   font-family: 'Raleway', sans-serif;
 } 
 
-/* may change the cursor to pointer */
-
 .left-side-btn:hover,
 .right-side-btn:hover {
   transition: .2s;
