@@ -31,16 +31,15 @@ describe('Landing Page User Flow', () => {
       .should('be.visible')
   });
 
-  it('should see a greeting message beneath the buttons', () => {
+  it('should see a greeting message beneath the buttons on the nav', () => {
     cy.get('.about-msg')
       .get('.greeting-msg')
-      .contains('the special land for words...')
+      .contains('a land for words...')
       .should('be.visible')
   })
 
   it('should see a background image', () => {
-    cy.get('.img-container')
-      .get('.background-img')
-      .should('be.visible')
+      cy.get('.background-img')
+        .should('be.visible')
   })
 })

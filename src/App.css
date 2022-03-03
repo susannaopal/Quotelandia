@@ -1,22 +1,30 @@
-.background-img {
-  position: fixed;
-  max-height: 100%;
+/* .background-img {
+  background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg");
+  background-position: fixed;
+  background-size: cover;
+  /* max-height: 100%;
   min-width: 100%;
   z-index: -1;
-  opacity: .3;
-}
+  opacity: .3; */
+
 
 .App {
+  background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg");
+  background-position: fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #A1BAC3;
   font-family: 'Raleway', sans-serif;
+  height: 100vh;
 }
 
+/* .home {
+  background-image: red;
+} */
 
-.nav {
+/* .nav {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -49,7 +57,7 @@
 
 /* may change the cursor to pointer */
 
-.left-side-btn:hover,
+/* .left-side-btn:hover,
 .right-side-btn:hover {
   transition: .2s;
   transform: scale(1.5);
@@ -58,4 +66,4 @@
 .about-msg {
   font-style: italic;
   color: #F0F8FF;
-}
+}  */
