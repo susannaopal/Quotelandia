@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 // import Quotes from './Quotes.js';
 // import { fetchQuotes } from './apiCall.js';

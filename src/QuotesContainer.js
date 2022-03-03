@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card'
+import CardDetails from './CardDetails'
 
 const Quotes = ({quotes}) => {
 
@@ -22,3 +22,16 @@ const Quotes = ({quotes}) => {
 }
 
 export default Quotes;
+
+//BEFORE WHEN APP HAD STATE
+// const Card = ({ text, author, id }) => {
+//   return (
+//     <div className='card'>
+//       <h3>{text}</h3>
+//       <p>{author}</p>
+//     </div>
+//   )
+// }
+
+// export default Card;
+
