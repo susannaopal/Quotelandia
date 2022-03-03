@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Quotes from './Quotes.js';
-import { fetchQuotes } from './apiCall.js';
+// import Quotes from './Quotes.js';
+// import { fetchQuotes } from './apiCall.js';
 // import Error from './Error.js'
 
 
@@ -30,7 +30,7 @@ render() {
               <button className='right-side-btn'>Search By Author</button>
             </div>
             <div className='about-msg'>
-                <h2 className='greeting-msg'>the special land for words...</h2>
+                <h2 className='greeting-msg'>a land for words...</h2>
             </div>
         </nav> 
               <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed'/>
