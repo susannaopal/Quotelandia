@@ -1,48 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
-import Quotes from './Quotes';
-import { fetchQuotes, GetQuotes } from './apiCall.js'
+import Quotes from './Quotes.js';
+import { fetchQuotes } from './apiCall.js';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      quotes: [
-    // {
-  //   "id": 1,
-  //   "title": "Genius is one percent inspiration and ninety-nine percent perspiration.",
-  //   "description": "Thomas Edison"
-  // },
-  // {
-  //   "id": 2,
-  //   "title": "You can observe a lot just by watching.",
-  //   "description": "Yogi Berra"
-  // },
-  // {
-  //   "id": 3,
-  //   "title": "A house divided against itself cannot stand.",
-  //   "description": "Abraham Lincoln"
-  // }
-  ]
+      quotes: []
     }
   }
 
-componentDidMount = () => {
-  fetchQuotes()
-  // .then(data=>console.log("is this working?", data))
-  .then(data => this.setState({quotes: data}))
-  // GetQuotes()
-  // .then(data=>console.log("are you also working?", data))
-
-
-}
+// componentDidMount = () => {
+//   fetchQuotes()
+//   .then(data => this.setState({quotes: data}))
+// }
  
 render() {
   return(
     <main className='App'>
-      <h1>Welcome to Quotelandia!</h1>
-      <Quotes quotes={this.state.quotes} />
+        <nav className='nav'>
+          <h1 className='title'>Welcome to Quotelandia</h1>
+            <div className='nav-btns-container'>
+              <button className='left-side-btn'>Quote of the Visit</button>
+              <button className='right-side-btn'>Search for Author</button>
+            </div>
+        </nav> 
+        <div className='img-container'>
+              <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed' />
+        </div>      
+      {/* <Quotes quotes={this.state.quotes} /> */}    
     </main>
   )
 }
@@ -50,3 +38,5 @@ render() {
 
 
 export default App;
+
+// position='fixed'  => end of photo
