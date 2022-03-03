@@ -3,9 +3,9 @@ import './App.css';
 import Quotes from './Quotes.js';
 import { fetchQuotes } from './apiCall.js';
 // import Error from './Error.js'
-import Nav from './Nav.js'
-import { Routes, Route } from 'react-router-dom'
-
+import Nav from './Nav.js';
+import { Routes, Route } from 'react-router-dom';
+import SearchBar from './SearchBar.js'
 
 class App extends Component {
   constructor() {
