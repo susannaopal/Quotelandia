@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Quotes from './Quotes.js';
 import { fetchQuotes } from './apiCall.js';
-import Error from './Error.js'
+// import Error from './Error.js'
 
 
 class App extends Component {
@@ -29,12 +29,12 @@ render() {
               <button className='left-side-btn'>See Quotes</button>
               <button className='right-side-btn'>Search By Author</button>
             </div>
+            <div className='about-msg'>
+                <h2 className='greeting-msg'>the special land for words...</h2>
+            </div>
         </nav> 
-        <div className='img-container'>
-              <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed' />
-        </div>
+              <img src="https://img.theculturetrip.com/wp-content/uploads/2017/10/old-books-436498_1280.jpg" alt='book-imagery-background' className='background-img' position='fixed'/>
              {/* <Quotes quotes={this.state.quotes} />    */}
-        
     </main>
   )
 }
@@ -43,4 +43,3 @@ render() {
 
 export default App;
 
-// position='fixed'  => end of photo
