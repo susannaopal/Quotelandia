@@ -12,13 +12,14 @@ class Search extends Component {
   constructor() {
     super()
     this.state = {
-
     }
   }
 
   render() {
     return (
-      <h3>Search Bar</h3>
+      <div className='search-section'>
+        <h3 className='search-title'>Search Bar</h3>
+      </div>
     )
   }
 }
