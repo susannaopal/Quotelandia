@@ -11,12 +11,40 @@ import { Link } from 'react-router-dom';
 
 
 class Search extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      value: ''
+      searchTerm: '',
+      results: ''
     }
   }
+
+  handleChange = (event) => {
+    this.setState({searchTerm: event.target.value})
+  }
+
+//Currently working if typed in exactly as 
+//Possible try a .contains
+//RegExer???: built in function to import that lets user set rules to disregard case (need to research this)
+//Next steps: Need to render the cards!
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    const filteredQuotes = this.props.quotes.filter((quote) => {
+      return quote.author === this.state.searchTerm
+    })
+    console.log('filtered:', filteredQuotes)
+    // this.clearInputs()
+  }
+
+//CLEARINPUTS FN not currently working correctly?
+  // clearInputs = () => {
+  //   this.setState({
+  //     searchTerm: '',
+  //     results: ''
+  //   })
+  // }
+
   render() {
     return (
       <>
@@ -25,15 +53,17 @@ class Search extends Component {
         </Link>
       <div className='search-section'>
         <div className='search-bar'>
-          <p className='search-title'>Search to see if your favorite author has a quote in this collection...</p>
+          <p className='search-title'>Search below to see if your favorite author is in Quotelandia...
+          </p>
        </div>
         <form>
           <input className='search-bar-input'
             type='text'
             placeholder='Search Author By Name'
-            // value={this.state.value}
-            // onChange={this.handleChange}
+            value={this.state.value}
+            onChange={this.handleChange}
           />
+          <button onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
       </>

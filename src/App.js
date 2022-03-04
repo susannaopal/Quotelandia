@@ -26,13 +26,13 @@ render() {
   return(
     <main className='App'>
         <Nav />
-        <div className='welcome-msg'>
+        {/* <div className='welcome-msg'>
           <h1>Quotelandia: some sort of quippy message about this magical place!</h1>
-          </div>
+          </div> */}
         <Routes> 
           <Route path='/'/>
           <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
-          <Route path='/search' element={<Search />}/>
+          <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
         </Routes>
     </main>
   )

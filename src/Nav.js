@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
 
   return (
-  <nav className='nav'>
+      <nav className='nav'>
             <h1 className='title'>Welcome to Quotelandia</h1>
             <div className='nav-btns-container'>
             <Link to='/quotes'>
