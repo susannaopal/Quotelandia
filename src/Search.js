@@ -63,7 +63,7 @@ class Search extends Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <button onClick={(event) => this.handleSubmit(event)}>Submit</button>
+          <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
       </>
