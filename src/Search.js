@@ -9,7 +9,8 @@ class Search extends Component {
     super(props)
     this.state = {
       searchTerm: '',
-      filteredQuotes: []
+      filteredQuotes: [],
+      searchError: ''
     }
   }
 
@@ -27,6 +28,7 @@ class Search extends Component {
     this.setState({ filteredQuotes: filteredQuotes })
     this.clearInputs()
   }
+
 
   clearInputs = () => {
     this.setState({
@@ -61,13 +63,13 @@ class Search extends Component {
             placeholder='Search Author By Name'
             value={this.state.searchTerm}
             onChange={this.handleChange}
-          />
+            />
           <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
-      <div className='filtered-quotes-div'>
-          {filteredQuoteCards}
-      </div>
+        <div className='filtered-quotes-container'>
+          <div className='author-quotes-cards'>{filteredQuoteCards}</div>
+        </div> 
       </>
     )
   }
