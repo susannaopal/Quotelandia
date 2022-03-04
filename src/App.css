@@ -12,12 +12,3 @@
   height: 100vh;
 }
 
-.welcome-msg{
-  box-sizing: border-box;
-  color: #00004C;
-  border: 3px solid #00004C;
-  padding: 10px;
-  background-color: #A1BAC3;
-  opacity: .9;
-  margin-top: 225px;
-}

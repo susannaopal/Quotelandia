@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
 
   return (
-  <nav className='nav'>
+      <nav className='nav'>
             <h1 className='title'>Welcome to Quotelandia</h1>
             <div className='nav-btns-container'>
             <Link to='/quotes'>
-              <button className='left-side-btn'>See Quotes</button>
+              <button className='left-side-btn'>See a Quote</button>
             </Link>
             <div className='about-msg'>
                 <h2 className='greeting-msg'>a land for words...</h2>

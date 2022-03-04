@@ -8,16 +8,58 @@
 import React, { Component } from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
+import Card from './Card.js';
 
 
 class Search extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      value: ''
+      searchTerm: '',
+      filteredQuotes: []
     }
   }
+
+  handleChange = (event) => {
+    this.setState({searchTerm: event.target.value})
+  }
+
+//Currently working if typed in exactly as 
+//Possible try a .contains
+//RegExer???: built in function to import that lets user set rules to disregard case (need to research this)
+//Next steps: Need to render the cards!
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    const filteredQuotes = this.props.quotes.filter((quote) => {
+      return quote.author === this.state.searchTerm
+    })
+    this.setState({ filteredQuotes: filteredQuotes })
+    this.clearInputs()
+  }
+
+//CLEARINPUTS FN not currently working correctly?
+  clearInputs = () => {
+    this.setState({
+      searchTerm: '' 
+    })
+    console.log("did i clear?, if so why am i not working?")
+  }
+
+  //Need to set state also to render the search results --> would container go within here? 
+
   render() {
+    const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
+    return (
+      <Card
+        text={quote.text}
+        author={quote.author}
+        id={index}
+        key={index}
+      />
+    )
+  })
+  console.log("what are you?", this.state.searchTerm)
     return (
       <>
         <Link to='/'>
@@ -25,16 +67,21 @@ class Search extends Component {
         </Link>
       <div className='search-section'>
         <div className='search-bar'>
-          <p className='search-title'>Search to see if your favorite author has a quote in this collection...</p>
+          <p className='search-title'>Search below to see if your favorite author is in Quotelandia...
+          </p>
        </div>
         <form>
           <input className='search-bar-input'
             type='text'
             placeholder='Search Author By Name'
-            // value={this.state.value}
-            // onChange={this.handleChange}
+            value={this.state.searchTerm}
+            onChange={this.handleChange}
           />
+          <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
+      </div>
+      <div className='filtered-quotes-div'>
+          {filteredQuoteCards}
       </div>
       </>
     )

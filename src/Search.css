@@ -45,3 +45,25 @@
   background-color: #F0F8FF;
   font-size: 20px;
 }
+
+.submit-btn {
+  margin-top: 10px;
+  height: 33px;
+  width: 6vw;
+  background-color: #d0cbc3;
+  color: #F0F8FF;
+  border: none;
+  font-size: 17px;
+  font-weight: bolder;
+  cursor: alias;
+  box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway',
+  sans-serif;
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+.submit-btn:hover {
+  transition: .2s;
+  transform: scale(1.5);
+}
