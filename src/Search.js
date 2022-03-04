@@ -17,21 +17,12 @@ class Search extends Component {
     this.setState({searchTerm: event.target.value})
   }
 
-  //Not working to fix lowercase issue:
-//tried a .contains
-//tried setting a variable and getting that return
-
-// Need to try?
-//RegExer???: built in function to import that lets user set rules to disregard case (need to research this)
-//Next steps: Need to render the cards!
-
   handleSubmit = (event) => {
     event.preventDefault()
     const filteredQuotes = this.props.quotes.filter((quote) => {
-      // console.log(typeof quote.author)
-      console.log(typeof this.state.searchTerm)
-
-      return quote.author === this.state.searchTerm
+            if(quote.author) {
+            return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
+            }
     })
     this.setState({ filteredQuotes: filteredQuotes })
     this.clearInputs()
