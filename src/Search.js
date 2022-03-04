@@ -28,6 +28,9 @@ class Search extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     const filteredQuotes = this.props.quotes.filter((quote) => {
+      // console.log(typeof quote.author)
+      console.log(typeof this.state.searchTerm)
+
       return quote.author === this.state.searchTerm
     })
     this.setState({ filteredQuotes: filteredQuotes })
