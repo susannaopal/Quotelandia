@@ -1,10 +1,3 @@
-//A class here 
-//Review ideabox stuff
-//Have input with the search bar
-//onChange in here and set state
-//can be a class and have state here similar with tracking each keyStroke
-//submit search submit -> clicks and fires a function in app (a handle change in app and fires on event)
-
 import React, { Component } from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
@@ -24,8 +17,11 @@ class Search extends Component {
     this.setState({searchTerm: event.target.value})
   }
 
-//Currently working if typed in exactly as 
-//Possible try a .contains
+  //Not working to fix lowercase issue:
+//tried a .contains
+//tried setting a variable and getting that return
+
+// Need to try?
 //RegExer???: built in function to import that lets user set rules to disregard case (need to research this)
 //Next steps: Need to render the cards!
 
@@ -38,15 +34,11 @@ class Search extends Component {
     this.clearInputs()
   }
 
-//CLEARINPUTS FN not currently working correctly?
   clearInputs = () => {
     this.setState({
       searchTerm: '' 
     })
-    console.log("did i clear?, if so why am i not working?")
   }
-
-  //Need to set state also to render the search results --> would container go within here? 
 
   render() {
     const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
@@ -59,7 +51,6 @@ class Search extends Component {
       />
     )
   })
-  console.log("what are you?", this.state.searchTerm)
     return (
       <>
         <Link to='/'>

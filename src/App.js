@@ -6,7 +6,7 @@ import { fetchQuotes } from './apiCall.js';
 import Nav from './Nav.js';
 import { Routes, Route } from 'react-router-dom';
 import Search from './Search.js';
-import Home from './Home.js'
+import Home from './Home.js';
 
 class App extends Component {
   constructor() {
@@ -39,4 +39,3 @@ render() {
 
 export default App;
 
-             {/* <Quotes quotes={this.state.quotes} />    */}
