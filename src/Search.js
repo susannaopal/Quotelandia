@@ -8,6 +8,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
+import Card from './Card.js';
 
 
 class Search extends Component {
@@ -15,7 +16,7 @@ class Search extends Component {
     super(props)
     this.state = {
       searchTerm: '',
-      results: ''
+      filteredQuotes: []
     }
   }
 
@@ -33,19 +34,32 @@ class Search extends Component {
     const filteredQuotes = this.props.quotes.filter((quote) => {
       return quote.author === this.state.searchTerm
     })
-    console.log('filtered:', filteredQuotes)
-    // this.clearInputs()
+    this.setState({ filteredQuotes: filteredQuotes })
+    this.clearInputs()
   }
 
 //CLEARINPUTS FN not currently working correctly?
-  // clearInputs = () => {
-  //   this.setState({
-  //     searchTerm: '',
-  //     results: ''
-  //   })
-  // }
+  clearInputs = () => {
+    this.setState({
+      searchTerm: '' 
+    })
+    console.log("did i clear?, if so why am i not working?")
+  }
+
+  //Need to set state also to render the search results --> would container go within here? 
 
   render() {
+    const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
+    return (
+      <Card
+        text={quote.text}
+        author={quote.author}
+        id={index}
+        key={index}
+      />
+    )
+  })
+  console.log("what are you?", this.state.searchTerm)
     return (
       <>
         <Link to='/'>
@@ -60,11 +74,14 @@ class Search extends Component {
           <input className='search-bar-input'
             type='text'
             placeholder='Search Author By Name'
-            value={this.state.value}
+            value={this.state.searchTerm}
             onChange={this.handleChange}
           />
           <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
+      </div>
+      <div className='filtered-quotes-div'>
+          {filteredQuoteCards}
       </div>
       </>
     )
