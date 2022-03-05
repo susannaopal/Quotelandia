@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Mod 3 Solo Showcase Project: Quotelandia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Deployed link to be added 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
+  - [Abstract](#abstract)
+  - [Technologies](#technologies)
+  - [Code Architecture](#code-architecture)
+  - [Illustrations](#illustrations)
+  - [Install + Setup](#set-up)
+  - [Contributors](#contributors)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
+  - [Project Specs](#project-specs)
 
-### `npm start`
+## Abstract
+My goal was to build a React app within 5 days that would allow a single user to visit the app to view the entire quote collection or to search through the quote collection by favorite author to see if that author is included in the collection. Both the full collection and the search functionality are featured to view on their own pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
+  - Javascript
+  - CSS/HTML
+  - React
+  - VScode
+  - [TypeFit Quotes API](https://type.fit/api/quotes)
+  - React Router v6
+  - Cypress Testing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Illustrations/GIFS
+- to be added still once finished
 
-### `npm test`
+## Install + Setup
+  - Clone this [repo](https://github.com/susannaopal/Quotelandia) to your local machine.
+  - `cd` into the directory `quote-generator`
+  - Run `npm install`
+  - Run `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributor
+  - [Susanna Carey](https://github.com/susannaopal)
+ 
+## Wins
+  - Designing the app in a short time frame and sticking to the MVP.
+  - The app functions as intended. 
+  - Successfully utilizing React Router v6.
+  - Creating an app I personally would want to use.   
 
-### `npm run build`
+## Challenges + Improvements
+  - Working in a short timeframe.
+  - Selecting the best API for the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Iterations
+  - Although posting is not possible with the API, eventually building my own backend of quotes to allow a user to post their own favorite quotes.
+  - Add a favoriting of quotes feature. 
+ 
+## Project Specs
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
