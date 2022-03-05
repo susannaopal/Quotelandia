@@ -1,6 +1,6 @@
 describe('Landing Page User Flow', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('http://localhost:3000/');
   });
 
   it('should be able to visit the url', () => {
@@ -15,20 +15,24 @@ describe('Landing Page User Flow', () => {
       .should('be.visible');
   });
 
-  it('should be able to see a button to view a quote on the nav', () => {
+  it('should be able to see a button to view quotes on the nav', () => {
     cy.get('.nav-btns-container')
       .get('.left-side-btn')
       .contains('Quotes')
-      .click()
-      .should('be.visible');
+       .should('be.visible')
+      // .click()
+      // .url()
+      // .should('eq', 'http://localhost:3000/quotes');
   });
 
   it('should be able to see a button to go to an author search on the nav', () => {
     cy.get('.nav-btns-container')
       .get('.right-side-btn')
       .contains('Search')
-      .click()
-      .should('be.visible');
+      .should('be.visible')
+      // .click()
+      // .url()
+      // .should('eq', 'http://localhost:3000/search');
   });
 
   it('should see an about message on the nav', () => {
@@ -46,6 +50,6 @@ describe('Landing Page User Flow', () => {
 
   it('should see a background image', () => {
       cy.get('.App')
-        .should('be.visible')
+        .should('be.visible');
   });
 });
