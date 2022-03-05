@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css'
+import './Card.css';
 
 const Card = ({ text, author, id }) => {
   return (
@@ -8,7 +8,7 @@ const Card = ({ text, author, id }) => {
       <p>{author}</p>
     </div>
   )
-}
+};
 
 export default Card;
 

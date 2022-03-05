@@ -11,8 +11,8 @@ class Search extends Component {
       searchTerm: '',
       filteredQuotes: [],
       searchError: ''
-    }
-  }
+    };
+  };
 
   handleChange = (event) => {
     this.setState({searchTerm: event.target.value})

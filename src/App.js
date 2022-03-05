@@ -14,20 +14,16 @@ class App extends Component {
     this.state = {
       quotes: [],
       // error: ''
-    }
+    };
   }
 
 componentDidMount = () => {
   fetchQuotes()
   .then(data => this.setState({quotes: data}))
 // .catch(error => this.setState({error: error}))
-// this.showRandomQuote()
 }
 
-// showRandomQuote = () => {
-//    Math.floor(Math.random() * this.state.quotes.length)
-// }
- 
+
 render() {
   return(
     <main className='App'>
@@ -39,8 +35,8 @@ render() {
         </Routes>
     </main>
   )
-}
-}
+  }
+};
 
 export default App;
 

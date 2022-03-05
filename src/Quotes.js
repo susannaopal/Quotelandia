@@ -14,8 +14,8 @@ const Quotes = ({quotes}) => {
         id={index}
         key={index}
       />
-    )
-  })
+    );
+  });
 
   return (
     <>
@@ -27,6 +27,6 @@ const Quotes = ({quotes}) => {
       </div>
     </>
   )
-}
+};
 
 export default Quotes;
