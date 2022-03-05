@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 import { Link } from 'react-router-dom';
 import Card from './Card.js';
 

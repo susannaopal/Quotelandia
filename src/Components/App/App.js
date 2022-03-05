@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import Quotes from './Quotes.js';
-import { fetchQuotes } from './apiCall.js';
-// import Error from './Error.js'
-import Nav from './Nav.js';
 import { Routes, Route } from 'react-router-dom';
+import { fetchQuotes } from '../API/apiCall.js';
+import '../CSS/App.css';
+import Quotes from './Quotes.js';
+import Nav from '.Nav.js';
 import Search from './Search.js';
 import Home from './Home.js';
-import Footer from './Footer.js'
+import Footer from './Footer.js';
+// import Error from './Error.js';
 
 class App extends Component {
   constructor() {
