@@ -1,5 +1,6 @@
 import React from 'react';
 import '../CSS/Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ text, author, id }) => {
   return (
@@ -12,3 +13,7 @@ const Card = ({ text, author, id }) => {
 
 export default Card;
 
+Card.propTypes = {
+  text: PropTypes.string,
+  author: PropTypes.string
+};

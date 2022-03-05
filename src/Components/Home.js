@@ -12,7 +12,7 @@ const Home = () => {
           <p className='new-msg'>If you're new, here's what you can do:</p>
           <p className='all-msg'>takea peek at our entire quote collection...</p>
           <p>or</p>
-          <p className='search-msg'>search the collection to see if your favorite author lives in Quotelandia...</p>
+          <p className='search-msg'>search the collection and see if your favorite author lives in Quotelandia...</p>
       </div> 
     </>
   )

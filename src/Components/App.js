@@ -27,15 +27,13 @@ componentDidMount = () => {
 render() {
   return(
     <div className='App'>
-      {this.state.quotes.length > 0 ?
-      <>
         <Nav />
+      {this.state.quotes.length > 0 ?
         <Routes> 
           <Route path='/' element={<Home />}/>
           <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
           <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
         </Routes>
-      </>
         : <Error />}
     </div>
   )

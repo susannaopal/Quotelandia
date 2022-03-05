@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../CSS/Search.css';
 import { Link } from 'react-router-dom';
 import Card from './Card.js';
+import PropTypes from 'prop-types';
+
 
 
 class Search extends Component {
@@ -77,3 +79,8 @@ class Search extends Component {
 
 export default Search;
 
+
+Search.propTypes = {
+  text: PropTypes.string,
+  author: PropTypes.string
+};
