@@ -25,6 +25,10 @@ class Search extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    if(!this.state.searchTerm) {
+      return <p className='name-required'>'Please add a name to search before submitting'</p>
+    }
+    console.log("did you work?", this.state.searchTerm)
     const filteredQuotes = this.props.quotes.filter((quote) => {
             if(quote.author) {
             return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
@@ -64,7 +68,7 @@ class Search extends Component {
         <form>
           <input className='search-bar-input'
             type='text'
-            placeholder='Search Author By Name'
+            placeholder='Search Author Name'
             value={this.state.searchTerm}
             onChange={this.handleChange}
             />
@@ -81,6 +85,7 @@ export default Search;
 
 
 Search.propTypes = {
-  text: PropTypes.string,
-  author: PropTypes.string
+  searchTerm: PropTypes.string,
+  filteredQuotes: PropTypes.array,
+  searchError: PropTypes.string
 };

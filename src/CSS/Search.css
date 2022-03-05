@@ -39,11 +39,12 @@
   color: #00004C;
 }
 
-.search-bar-input {
-  width: 40%;
-  height: 40px;
-  background-color: #F0F8FF;
-  font-size: 20px;
+@media screen and (max-width: 700px) {
+  .search-bar-input {
+    margin: 0;
+    display: flex;
+    background-color: #F0F8FF;
+  }
 }
 
 .submit-btn {
@@ -76,4 +77,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
   padding: 8%;
+}
+
+.name-required {
+  border: 2px solid orange;
 }

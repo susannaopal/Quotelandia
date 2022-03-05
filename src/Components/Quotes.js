@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card.js';
 import '../CSS/Quotes.css';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 const Quotes = ({quotes}) => {
@@ -32,7 +32,7 @@ const Quotes = ({quotes}) => {
 
 export default Quotes;
 
-// Quotes.propTypes = {
-//   text: PropTypes.string,
-//   author: PropTypes.string
-// };
+Quotes.propTypes = {
+  text: PropTypes.string,
+  author: PropTypes.string
+};
