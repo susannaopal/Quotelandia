@@ -12,7 +12,7 @@ class Search extends Component {
       filteredQuotes: [],
       searchError: ''
     };
-  };
+  }
 
   handleChange = (event) => {
     this.setState({searchTerm: event.target.value})
@@ -30,14 +30,13 @@ class Search extends Component {
     })
     this.setState({ filteredQuotes: filteredQuotes })
     this.clearInputs()
-  }
-
+  };
 
   clearInputs = () => {
     this.setState({
       searchTerm: '' 
     })
-  }
+  };
 
   render() {
     const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
@@ -70,13 +69,11 @@ class Search extends Component {
           <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
-        <div className='filtered-quotes-container'>
-          <div className='author-quotes-cards'>{filteredQuoteCards}</div>
-        </div> 
+          {filteredQuoteCards}
       </>
     )
   }
-}
+};
 
 export default Search;
 

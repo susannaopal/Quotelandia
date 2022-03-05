@@ -1,15 +1,7 @@
 describe('All Quotes User Flow', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://type.fit/api/quotes', {fixture: "quotes.json"})
-      .visit('http://localhost:3000/')
-      .get('.left-side-btn')
-      .click()
-      .visit('http://localhost:3000/quotes')
-  });
-
-  it('should be able to visit the url', () => {
-    cy.url()
-      .should('eq', 'http://localhost:3000/');
+      .visit('http://localhost:3000/quotes');
   });
 
    it('should see a title', () => {
@@ -17,16 +9,6 @@ describe('All Quotes User Flow', () => {
       .get('.title')
       .contains('Welcome to Quotelandia')
       .should('be.visible');
-  });
-
-  it('should be able to see a button to view a quote on the nav', () => {
-    cy.get('.nav-btns-container')
-      .get('.left-side-btn')
-      .contains('Quotes')
-       .should('be.visible')
-      .click()
-      .url()
-      .should('eq', 'http://localhost:3000/quotes');
   });
 
   it('should be able to see a button to go to an author search on the nav', () => {
