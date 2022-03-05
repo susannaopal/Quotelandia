@@ -1,6 +1,6 @@
 describe('Landing Page User Flow', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3000/');
   });
 
   it('should be able to visit the url', () => {
@@ -12,34 +12,38 @@ describe('Landing Page User Flow', () => {
     cy.get('.nav')
       .get('.title')
       .contains('Welcome to Quotelandia')
-      .should('be.visible')
+      .should('be.visible');
   });
 
-  it('should be able to see a button to view a quote on the nav', () => {
+  it('should be able to see a button to view quotes on the nav', () => {
     cy.get('.nav-btns-container')
       .get('.left-side-btn')
-      .contains('See Quotes')
-      .click()
-      .should('be.visible')
+      .contains('Quotes')
+      .should('be.visible');
   });
 
   it('should be able to see a button to go to an author search on the nav', () => {
     cy.get('.nav-btns-container')
       .get('.right-side-btn')
-      .contains('Search By Author')
-      .click()
-      .should('be.visible')
+      .contains('Search')
+      .should('be.visible');
   });
 
-  it('should see a greeting message beneath the buttons on the nav', () => {
-    cy.get('.about-msg')
+  it('should see an about message on the nav', () => {
+    cy.get('.nav')
+      .get('.about-msg-div')
       .get('.greeting-msg')
       .contains('a land for words...')
-      .should('be.visible')
-  })
+      .should('be.visible');
+  });
+
+  it('should see a welcome message on the home landing page', () => {
+    cy.get('.welcome-msg')
+      .should('be.visible');
+  });
 
   it('should see a background image', () => {
-      cy.get('.background-img')
-        .should('be.visible')
-  })
-})
+      cy.get('.App')
+        .should('be.visible');
+  });
+});
