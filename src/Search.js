@@ -11,12 +11,15 @@ class Search extends Component {
       searchTerm: '',
       filteredQuotes: [],
       searchError: ''
-    }
-  }
+    };
+  };
 
   handleChange = (event) => {
     this.setState({searchTerm: event.target.value})
   }
+
+//if search term is not an empty '' in handlesubmit then can click
+//otherwise cannot submit
 
   handleSubmit = (event) => {
     event.preventDefault()

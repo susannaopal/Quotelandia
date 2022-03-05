@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       quotes: [],
       // error: ''
-    }
+    };
   }
 
 componentDidMount = () => {
@@ -22,7 +22,8 @@ componentDidMount = () => {
   .then(data => this.setState({quotes: data}))
 // .catch(error => this.setState({error: error}))
 }
- 
+
+
 render() {
   return(
     <main className='App'>
@@ -34,8 +35,8 @@ render() {
         </Routes>
     </main>
   )
-}
-}
+  }
+};
 
 export default App;
 
