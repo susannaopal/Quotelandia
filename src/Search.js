@@ -1,10 +1,3 @@
-//A class here 
-//Review ideabox stuff
-//Have input with the search bar
-//onChange in here and set state
-//can be a class and have state here similar with tracking each keyStroke
-//submit search submit -> clicks and fires a function in app (a handle change in app and fires on event)
-
 import React, { Component } from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
@@ -16,7 +9,8 @@ class Search extends Component {
     super(props)
     this.state = {
       searchTerm: '',
-      filteredQuotes: []
+      filteredQuotes: [],
+      searchError: ''
     }
   }
 
@@ -24,29 +18,23 @@ class Search extends Component {
     this.setState({searchTerm: event.target.value})
   }
 
-//Currently working if typed in exactly as 
-//Possible try a .contains
-//RegExer???: built in function to import that lets user set rules to disregard case (need to research this)
-//Next steps: Need to render the cards!
-
   handleSubmit = (event) => {
     event.preventDefault()
     const filteredQuotes = this.props.quotes.filter((quote) => {
-      return quote.author === this.state.searchTerm
+            if(quote.author) {
+            return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
+            }
     })
     this.setState({ filteredQuotes: filteredQuotes })
     this.clearInputs()
   }
 
-//CLEARINPUTS FN not currently working correctly?
+
   clearInputs = () => {
     this.setState({
       searchTerm: '' 
     })
-    console.log("did i clear?, if so why am i not working?")
   }
-
-  //Need to set state also to render the search results --> would container go within here? 
 
   render() {
     const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
@@ -59,7 +47,6 @@ class Search extends Component {
       />
     )
   })
-  console.log("what are you?", this.state.searchTerm)
     return (
       <>
         <Link to='/'>
@@ -76,13 +63,13 @@ class Search extends Component {
             placeholder='Search Author By Name'
             value={this.state.searchTerm}
             onChange={this.handleChange}
-          />
+            />
           <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
-      <div className='filtered-quotes-div'>
-          {filteredQuoteCards}
-      </div>
+        <div className='filtered-quotes-container'>
+          <div className='author-quotes-cards'>{filteredQuoteCards}</div>
+        </div> 
       </>
     )
   }
