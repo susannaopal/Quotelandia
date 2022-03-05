@@ -39,12 +39,11 @@
   color: #00004C;
 }
 
-@media screen and (max-width: 700px) {
-  .search-bar-input {
-    margin: 0;
-    display: flex;
-    background-color: #F0F8FF;
-  }
+.search-bar-input {
+  width: 40%;
+  height: 40px;
+  background-color: #F0F8FF;
+  font-size: 20px;
 }
 
 .submit-btn {
@@ -59,7 +58,7 @@
   cursor: alias;
   box-shadow: 3px 3px #4f0202;
   font-family: 'Raleway',
-  sans-serif;
+    sans-serif;
   margin-left: 2%;
   margin-bottom: 5%;
 }
