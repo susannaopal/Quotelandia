@@ -1,0 +1,30 @@
+.welcome-msg {
+  box-sizing: border-box;
+  color: #00004C;
+  border: 3px solid #00004C;
+  padding: 10px;
+  background-color: #A1BAC3;
+  opacity: .9;
+  margin-top: 150px;
+}
+
+.title-app {
+  font-size: xx-large;
+  color: #00004C;
+}
+
+.greeting {
+  font-size: large;
+  font-style: italic;
+}
+
+.all-msg,
+.new-msg,
+.search-msg {
+  font-size: medium;
+}
+
+.search-msg,
+.all-msg {
+    font-style: italic;
+}

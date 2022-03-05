@@ -46,4 +46,11 @@ describe('Landing Page User Flow', () => {
       cy.get('.App')
         .should('be.visible');
   });
+
+  it('should see a footer with the app creator\'s name', () => {
+      cy.get('.footer-div')
+        .get('.footer-div > p')
+        .contains('Quotelandia was created by Susanna Carey')
+        .should('be.visible');
+  });
 });
