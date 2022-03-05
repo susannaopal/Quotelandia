@@ -57,7 +57,7 @@ class Search extends Component {
         </Link>
       <div className='search-section'>
         <div className='search-bar'>
-          <p className='search-title'>Search below to see if your favorite author is in Quotelandia...
+          <p className='search-title'>Search below to see if your favorite author lives in Quotelandia...
           </p>
        </div>
         <form>
