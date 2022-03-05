@@ -1,7 +1,10 @@
 describe('All Quotes User Flow', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://type.fit/api/quotes', {fixture: "quotes.json"})
-    cy.visit('http://localhost:3000/quotes');
+      .visit('http://localhost:3000/')
+      cy.get('.left-side-btn')
+      .click()
+      .visit('http://localhost:3000/quotes')
   });
 
   it('should be able to visit the url', () => {
@@ -20,7 +23,7 @@ describe('All Quotes User Flow', () => {
     cy.get('.nav-btns-container')
       .get('.left-side-btn')
       .contains('Quotes')
-      //  .should('be.visible')
+       .should('be.visible')
       .click()
       .url()
       .should('eq', 'http://localhost:3000/quotes');
@@ -30,7 +33,7 @@ describe('All Quotes User Flow', () => {
     cy.get('.nav-btns-container')
       .get('.right-side-btn')
       .contains('Search')
-      // .should('be.visible')
+      .should('be.visible')
       .click()
       .url()
       .should('eq', 'http://localhost:3000/search');
