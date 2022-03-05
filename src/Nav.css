@@ -38,7 +38,9 @@
   transform: scale(1.5);
 }
 
-.about-msg {
+.about-msg-div {
+  border: 2px solid hotpink;
   font-style: italic;
   color: #F0F8FF;
+  margin-top: -2%;
 }
