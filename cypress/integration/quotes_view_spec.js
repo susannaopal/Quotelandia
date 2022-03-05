@@ -2,14 +2,14 @@ describe('All Quotes User Flow', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://type.fit/api/quotes', {fixture: "quotes.json"})
       .visit('http://localhost:3000/')
-      cy.get('.left-side-btn')
+      .get('.left-side-btn')
       .click()
       .visit('http://localhost:3000/quotes')
   });
 
   it('should be able to visit the url', () => {
     cy.url()
-      .should('eq', 'http://localhost:3000/quotes');
+      .should('eq', 'http://localhost:3000/');
   });
 
    it('should see a title', () => {
@@ -72,7 +72,6 @@ describe('All Quotes User Flow', () => {
       .contains('Thomas Edison')
       .should('be.visible');
   });
-
-  });
+});
 
 
