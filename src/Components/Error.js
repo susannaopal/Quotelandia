@@ -7,10 +7,7 @@ const Error = () => {
   return (
     <div className='error-container'>
          <img className='error-img' src={require('../Assets/cursive.jpg')} alt='error msg'/>
-         <p className='error-msg'>Oops, something is amiss!</p>
-        <Link to='/'>
-          <button className='go-home'>Return Home</button>
-        </Link>
+         <p className='error-msg'>Oops, something is amiss! Please return home.</p>
     </div>
   )
 };

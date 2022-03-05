@@ -26,8 +26,8 @@ componentDidMount = () => {
 
 render() {
   return(
-    <main className='App'>
-      {this.state.quotes.length > 0 ? 
+    <div className='App'>
+      {this.state.quotes.length > 0 ?
       <>
         <Nav />
         <Routes> 
@@ -37,7 +37,7 @@ render() {
         </Routes>
       </>
         : <Error />}
-    </main>
+    </div>
   )
   }
 };
