@@ -7,6 +7,7 @@ import Nav from './Nav.js';
 import Search from './Search.js';
 import Home from './Home.js';
 import Error from './Error.js';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
@@ -41,6 +42,13 @@ render() {
   }
 };
 
+
 export default App;
+
+App.propTypes = {
+  quotes: PropTypes.arrayOf(PropTypes.object),
+  error:  PropTypes.string
+}
+
 
 

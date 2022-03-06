@@ -80,5 +80,5 @@ export default Search;
 
 
 Search.propTypes = {
-  quotes: PropTypes.array
+  quotes: PropTypes.arrayOf(PropTypes.object),
 };
