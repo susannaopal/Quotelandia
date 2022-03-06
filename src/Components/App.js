@@ -9,7 +9,6 @@ import Home from './Home.js';
 import Error from './Error.js';
 import PropTypes from 'prop-types';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -27,16 +26,16 @@ componentDidMount = () => {
 
 render() {
   return(
-    <div className='App'>
-        <Nav />
-        <Routes> 
-          <Route path='*' element={<Error />} />
-          <Route path='/' element={<Home />}/>
-          <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
-          <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
-        </Routes>
-    </div>
-  )
+      <div className='App'>
+          <Nav />
+          <Routes> 
+            <Route path='*' element={<Error />} />
+            <Route path='/' element={<Home />}/>
+            <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
+            <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
+          </Routes>
+      </div>
+    )
   }
 };
 
@@ -45,7 +44,7 @@ export default App;
 App.propTypes = {
   quotes: PropTypes.arrayOf(PropTypes.object),
   error:  PropTypes.string
-}
+};
 
 
 

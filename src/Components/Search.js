@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 class Search extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       searchTerm: '',
       filteredQuotes: [],
@@ -19,7 +19,7 @@ class Search extends Component {
   handleChange = (event) => {
     this.setState({searchTerm: event.target.value})
     this.setState({hasSearched: false})
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -33,7 +33,7 @@ class Search extends Component {
     }
   });
       this.setState({ filteredQuotes: filteredQuotes })
-  }
+  };
 
   render() {
     const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
@@ -52,21 +52,20 @@ class Search extends Component {
         <Link to='/'>
           <button className='home-btn'>Return Home</button>
         </Link>
-      <div className='search-section'>
-        <div className='search-bar'>
-          <p className='search-title'>Search below to see if your favorite author lives in Quotelandia...
-          </p>
-       </div>
-        <form>
-          <input className='search-bar-input'
-            type='text'
-            placeholder='Search Author Name'
-            value={this.state.searchTerm}
-            onChange={this.handleChange}
-            />
-          <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
-        </form>
-      </div>
+        <div className='search-section'>
+          <div className='search-bar'>
+            <p className='search-title'>Search below to see if your favorite author lives in Quotelandia...</p>
+          </div>
+          <form>
+            <input className='search-bar-input'
+              type='text'
+              placeholder='Search Author Name'
+              value={this.state.searchTerm}
+              onChange={this.handleChange}
+              />
+            <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
+          </form>
+        </div>
           {this.state.hasSearched && this.state.searchTerm === '' && this.state.emptySubmitError}
           {this.state.hasSearched && this.state.searchTerm !== '' && this.state.filteredQuotes.length === 0 && this.state.searchError}
           {this.state.hasSearched && this.state.filteredQuotes.length > 0 && filteredQuoteCards}
