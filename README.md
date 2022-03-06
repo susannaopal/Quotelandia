@@ -27,8 +27,16 @@ My goal was to build a React app within 5 days that would allow a single user to
   - [TypeFit Quotes API](https://type.fit/api/quotes)
   
 
-## Illustrations/GIFS
-- to be added still once finished
+## User Overview 
+
+Visiting the site to view full quote collection:
+![Home-quotes](https://media.giphy.com/media/VgldjViox3ZveOnmpR/giphy.gif)
+
+User-interaction with searching the collection by author:
+![author-search](https://media.giphy.com/media/rXbO3RhgkUcZDfPwtt/giphy.gif)
+
+Uh-oh, an error has occurred!
+![error-handling](https://media.giphy.com/media/gfM8aENCbVfCuESWTC/giphy.gif)
 
 ## Install + Setup
   - Clone this [repo](https://github.com/susannaopal/Quotelandia) to your local machine.
