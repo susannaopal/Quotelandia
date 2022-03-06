@@ -21,7 +21,7 @@
 .all-msg,
 .new-msg,
 .search-msg {
-  font-size: medium;
+  font-size: large;
 }
 
 .search-msg,
@@ -31,5 +31,5 @@
 }
 
 .or {
-  font-size: smaller;
+  font-size: small;
 }
