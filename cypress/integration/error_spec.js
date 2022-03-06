@@ -1,11 +1,11 @@
 describe('Error Flow', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://type.fit/api/quotes', {statusCode: 500});
-    cy.visit('http://localhost:3000/quotes');
+    cy.visit('http://localhost:3000/');
   });
 
   it('should show an error message if a 500 error occurs', () => {
-     cy.visit('http://localhost:3000/o9o9');
+    cy.visit('http://localhost:3000/o9o9');
     cy.contains('Oops, something is amiss! Please return home.');
   });
 
