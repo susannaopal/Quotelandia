@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;  
+  margin-top: 45px;
 }
 
 .error-img {
   margin-top: 20px;
   border: 2px solid #00004C;
-  width: 40%;
+  width: 30%;
 }
 
 .error-msg {
@@ -15,9 +16,28 @@
   align-items: center;
   justify-content: center;
   background-color: #A1BAC3;
-   border: 2px solid #00004C;
+  border: 2px solid #00004C;
   width: 45%;
   height: 10vh;
   font-size: 25px;
   font-style: italic;
+}
+
+.home-button {
+  margin-top: 10px;
+  height: 43px;
+  width: 8vw;
+  background-color: #d0cbc3;
+  color: #F0F8FF;
+  border: none;
+  font-size: 17px;
+  font-weight: bolder;
+  cursor: alias;
+  box-shadow: 3px 3px #4f0202;
+  font-family: 'Raleway', sans-serif;
+}
+
+.home-button:hover {
+  transition: .2s;
+  transform: scale(1.5);
 }

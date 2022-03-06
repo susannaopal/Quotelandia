@@ -14,7 +14,7 @@
 }
 
 .greeting {
-  font-size: large;
+  font-size: x-large;
   font-style: italic;
 }
 
@@ -27,4 +27,9 @@
 .search-msg,
 .all-msg {
     font-style: italic;
+    font-weight: bolder;
+}
+
+.or {
+  font-size: smaller;
 }
