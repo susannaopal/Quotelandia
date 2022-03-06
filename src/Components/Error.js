@@ -9,7 +9,7 @@ const Error = () => {
         <button className='home-button'>Return Home</button>
       </Link>
          <img className='error-img' src={require('../Assets/cursive.jpg')} alt='error msg'/>
-         <p className='error-msg'>Oops, something is amiss! Please return home.</p>
+         <div className='error-msg'>Oops, something is amiss! Please return home.</div>
     </div>
   )
 };
