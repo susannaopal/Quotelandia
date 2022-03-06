@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Card from './Card.js';
 import PropTypes from 'prop-types';
 
-
-
 class Search extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +13,7 @@ class Search extends Component {
       emptySubmitError: 'Please add a name to search before submitting.',
       searchError: 'Sorry, we don\'t have that author in the collection.',
       hasSearched: false
-    }
+    };
   }
 
   handleChange = (event) => {
@@ -47,7 +45,8 @@ class Search extends Component {
           key={index}
        />
     )
-  })
+  });
+  
     return (
       <>
         <Link to='/'>
@@ -78,7 +77,6 @@ class Search extends Component {
 
 export default Search;
 
-
 Search.propTypes = {
-  quotes: PropTypes.arrayOf(PropTypes.object),
+  quotes: PropTypes.arrayOf(PropTypes.object)
 };

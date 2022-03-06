@@ -2,7 +2,6 @@ import React from 'react';
 import '../CSS/Error.css';
 import { Link } from 'react-router-dom';
 
-
 const Error = () => {
   return (
     <div className='error-container'>

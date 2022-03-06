@@ -4,7 +4,6 @@ import '../CSS/Quotes.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-
 const Quotes = ({quotes}) => {
 
   const quoteCards = quotes.map((quote, index) => {

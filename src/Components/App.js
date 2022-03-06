@@ -25,23 +25,20 @@ componentDidMount = () => {
   .catch(error => this.setState({error: error}))
 }
 
-
 render() {
   return(
     <div className='App'>
         <Nav />
-      {this.state.quotes.length > 0 ?
         <Routes> 
+          <Route path='*' element={<Error />} />
           <Route path='/' element={<Home />}/>
           <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
           <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
         </Routes>
-        : <Error />}
     </div>
   )
   }
 };
-
 
 export default App;
 
