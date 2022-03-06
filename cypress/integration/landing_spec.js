@@ -37,11 +37,6 @@ describe('Landing Page User Flow', () => {
       .should('be.visible');
   });
 
-  it('should see a welcome message on the home landing page', () => {
-    cy.get('.welcome-msg')
-      .should('be.visible');
-  });
-
   it('should see a background image', () => {
       cy.get('.App')
         .should('be.visible');
