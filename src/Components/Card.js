@@ -2,7 +2,7 @@ import React from 'react';
 import '../CSS/Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ text, author, id }) => {
+const Card = ({ text, author }) => {
   return (
     <div className='quote-card'>
       <h3>{text}</h3>

@@ -12,47 +12,40 @@ class Search extends Component {
     this.state = {
       searchTerm: '',
       filteredQuotes: [],
-      searchError: ''
-    };
+      emptySubmitError: 'Please add a name to search before submitting.',
+      searchError: 'Sorry, we don\'t have that author in the collection.',
+      hasSearched: false
+    }
   }
 
   handleChange = (event) => {
     this.setState({searchTerm: event.target.value})
+    this.setState({hasSearched: false})
   }
-
-//if search term is not an empty '' in handlesubmit then can click
-//otherwise cannot submit
 
   handleSubmit = (event) => {
     event.preventDefault()
-    if(!this.state.searchTerm) {
-      return <p className='name-required'>'Please add a name to search before submitting'</p>
+    this.setState({hasSearched: true})
+    if (this.state.searchTerm === '') {
+      return 
     }
-    console.log("did you work?", this.state.searchTerm)
-    const filteredQuotes = this.props.quotes.filter((quote) => {
-            if(quote.author) {
-            return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
-            }
-    })
-    this.setState({ filteredQuotes: filteredQuotes })
-    this.clearInputs()
-  };
-
-  clearInputs = () => {
-    this.setState({
-      searchTerm: '' 
-    })
-  };
+     const filteredQuotes = this.props.quotes.filter((quote) => {
+      if(quote.author) {
+        return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
+    }
+  });
+      this.setState({ filteredQuotes: filteredQuotes })
+  }
 
   render() {
     const filteredQuoteCards = this.state.filteredQuotes.map((quote, index) => {
-    return (
-      <Card
-        text={quote.text}
-        author={quote.author}
-        id={index}
-        key={index}
-      />
+      return (
+        <Card
+          text={quote.text}
+          author={quote.author}
+          id={index}
+          key={index}
+       />
     )
   })
     return (
@@ -75,7 +68,9 @@ class Search extends Component {
           <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
       </div>
-          {filteredQuoteCards}
+          {this.state.hasSearched && this.state.searchTerm === '' && this.state.emptySubmitError}
+          {this.state.hasSearched && this.state.searchTerm !== '' && this.state.filteredQuotes.length === 0 && this.state.searchError}
+          {this.state.hasSearched && this.state.filteredQuotes.length > 0 && filteredQuoteCards}
       </>
     )
   }
@@ -85,7 +80,5 @@ export default Search;
 
 
 Search.propTypes = {
-  searchTerm: PropTypes.string,
-  filteredQuotes: PropTypes.array,
-  searchError: PropTypes.string
+  quotes: PropTypes.array
 };
