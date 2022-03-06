@@ -1,6 +1,6 @@
 # Mod 3 Solo Showcase Project: Quotelandia
 
-Deployed link to be added 
+Visit the deployed app of [Quotelandia](https://quotelandia.herokuapp.com/)
 
 
 ## Table of Contents
@@ -22,9 +22,10 @@ My goal was to build a React app within 5 days that would allow a single user to
   - CSS/HTML
   - React
   - VScode
-  - [TypeFit Quotes API](https://type.fit/api/quotes)
   - React Router v6
   - Cypress Testing
+  - [TypeFit Quotes API](https://type.fit/api/quotes)
+  
 
 ## Illustrations/GIFS
 - to be added still once finished
