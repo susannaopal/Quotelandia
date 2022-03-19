@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { Component } from 'react';
 import '../CSS/Search.css';
 import { Link } from 'react-router-dom';
@@ -31,9 +32,9 @@ class Search extends Component {
       if(quote.author) {
         return quote.author.toLowerCase() === this.state.searchTerm.toLowerCase()
     }
+    return
   });
       this.setState({ filteredQuotes: filteredQuotes })
-      return
   };
 
   render() {
