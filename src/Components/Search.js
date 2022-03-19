@@ -33,6 +33,7 @@ class Search extends Component {
     }
   });
       this.setState({ filteredQuotes: filteredQuotes })
+      return
   };
 
   render() {
