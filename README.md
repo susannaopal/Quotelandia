@@ -6,7 +6,6 @@ Visit the deployed app of [Quotelandia](https://quotelandia.herokuapp.com/)
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
