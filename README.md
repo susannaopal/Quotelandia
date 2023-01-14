@@ -1,6 +1,6 @@
 # Mod 3 Solo Showcase Project: Quotelandia
 
-Visit the deployed app of [Quotelandia](https://quoteable.surge.sh/)
+Visit the deployed app of [Quotelandia](https://quotelandia.surge.sh/)
 
 
 ## Table of Contents
