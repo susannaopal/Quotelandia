@@ -30,6 +30,7 @@
   cursor: alias;
   box-shadow: 3px 3px #4f0202;
   font-family: 'Raleway', sans-serif;
+  border-radius: 20px;
 } 
 
 .left-side-btn:hover,

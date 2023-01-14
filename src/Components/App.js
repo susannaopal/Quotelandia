@@ -8,6 +8,7 @@ import Search from './Search.js';
 import Home from './Home.js';
 import Error from './Error.js';
 import PropTypes from 'prop-types';
+import Footer from './Footer.js';
 
 class App extends Component {
   constructor() {
@@ -34,6 +35,7 @@ render() {
             <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/>
             <Route path='/search' element={<Search quotes={this.state.quotes} />}/>
           </Routes>
+          <Footer />
       </div>
     )
   }

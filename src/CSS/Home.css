@@ -5,7 +5,8 @@
   padding: 10px;
   background-color: #A1BAC3;
   opacity: .9;
-  margin-top: 150px;
+  margin-top: 2.5em;
+  border-radius: 20px;
 }
 
 .title-app {
@@ -26,8 +27,8 @@
 
 .search-msg,
 .all-msg {
-    font-style: italic;
-    font-weight: bolder;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .or {

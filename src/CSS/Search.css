@@ -10,6 +10,7 @@
   cursor: alias;
   box-shadow: 3px 3px #4f0202;
   font-family: 'Raleway', sans-serif;
+  border-radius: 20px;
 } 
 
 .home-btn:hover {
@@ -27,6 +28,7 @@
   padding: 10px;
   background-color: #A1BAC3;
   opacity: .9;
+  border-radius: 20px;
 }
 
 .search-title {
@@ -37,6 +39,7 @@
   background-color: #A1BAC3;
   font-style: italic;
   color: #00004C;
+  border-radius: 20px;
 }
 
 .search-bar-input {
@@ -44,6 +47,7 @@
   height: 40px;
   background-color: #F0F8FF;
   font-size: 20px;
+  border-radius: 20px;
 }
 
 .submit-btn {
@@ -60,6 +64,7 @@
   font-family: 'Raleway', sans-serif;
   margin-left: 2%;
   margin-bottom: 5%;
+  border-radius: 20px;
 }
 
 .submit-btn:hover {
